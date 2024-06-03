@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center min-h-screen bg-primary text-white font-sans">
-    <div class="w-screen px-8 sm:w-[500px] bg-primary py-6 flex flex-col gap-4">
+    <div class="w-screen px-8 sm:w-[500px] bg-primary py-16 flex flex-col gap-4">
 
       <!-- Header -->
       <div class="flex flex-col gap-1 text-center">
