@@ -122,10 +122,10 @@ export default {
           `https://tubes-three.vercel.app/${this.action}/${this.algorithm}?key=${this.key}&data=${this.data}`
         );
         if (this.algorithm === "RSA") {
-          this.dataResult = response.data.data;
-          this.dataKey = response.data.key;
+          this.dataResult = decodeURIComponent(response.data.data);
+          this.dataKey = decodeURIComponent(response.data.key);
         } else {
-          this.dataResult = response.data.data;
+          this.dataResult = decodeURIComponent(response.data.data);
         }
         this.errorMessage = null;
       } catch (error) {
@@ -133,6 +133,7 @@ export default {
         this.errorMessage = "Gagal melakukan enkripsi: " + error.message;
       }
     },
+
     async handleDecrypt() {
       try {
         const response = await axios.get(
