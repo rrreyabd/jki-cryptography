@@ -137,7 +137,7 @@ export default {
     async handleDecrypt() {
       try {
         const response = await axios.get(
-          `https://tubes-three.vercel.app/${this.action}/${this.algorithm}?key=${this.key}&data=${encodeURIComponent(this.data)}`
+          `https://tubes-three.vercel.app/${this.action}/${this.algorithm}?key=${encodeURIComponent(this.key)}&data=${encodeURIComponent(this.data)}`
         );
         this.dataResult = response.data;
         this.dataKey = null
